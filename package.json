@@ -1,0 +1,26 @@
+{
+  "name": "hospital-materials-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathcolombo/hospital-materials-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mathcolombo/hospital-materials-api/issues"
+  },
+  "homepage": "https://github.com/mathcolombo/hospital-materials-api#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
+
