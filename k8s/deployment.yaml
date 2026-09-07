@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hospital-materials-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hospital-materials-api
+  template:
+    metadata:
+      labels:
+        app: hospital-materials-api
+    spec:
+      containers:
+      - name: hospital-materials-api
+        image: mathcolombo/hospital-materials-api:v1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: AMBIENTE
+          valueFrom:
+            configMapKeyRef:
+              name: hospital-materials-config
+              key: AMBIENTE
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: hospital-materials-secret
+              key: API_KEY
